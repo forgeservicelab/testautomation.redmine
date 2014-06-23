@@ -1,0 +1,62 @@
+*** Settings ***
+Suite Setup    Go to homepage
+#Suite Teardown    Close All Browsers
+Resource    ./common/assets/secrets.txt
+Resource    ./common/assets/resource.txt
+Resource    local_resource.txt
+
+*** Variables ***
+${USER}    ${VALID_USER}
+${PASSWORD}    ${VALID_PASSWORD}
+${TO}    ${TO_XMPP}
+
+*** Test Cases ***
+#Auth LOGIN OK
+#    Set Log Level    NONE
+#    login Auth    ${USER}      ${PASSWORD}    You are currently logged in as ${USER}
+#    Set Log Level    DEBUG
+Sign In without CAS
+    Go to    ${REDMINE_URL}
+    Input Text    id=username    ${USER}
+    Input Text    id=password    ${PASSWORD}
+    Click Element    name=login
+    Wait Until Page Contains    Welcome to FORGE Service Lab
+Administration
+    Click Element    link=Administration
+    Wait Until Page Contains    Information
+Information
+    Click Element    link=Information
+    Wait Until Page Contains    2.2.4.stable
+Plugins
+    Click Element    link=Plugins
+    Wait Until Page Contains    Redmine Backlogs
+    Wait Until Page Contains    Redmine Extended Watchers plugin
+    Wait Until Page Contains    Redmine Impasse plugin
+    Wait Until Page Contains    Redmine LDAP Sync
+    Wait Until Page Contains    Redcarpet Markdown Wiki formatter
+    Wait Until Page Contains    Redmine Wiki Extensions plugin
+
+#Redmine Support Wiki
+#    Go to    ${REDMINE_URL}
+#    Wait Until Page Contains    Welcome
+#    Select From List By Index    id=project_quick_jump_box    11
+#    Wait Until Page Contains    FORGE Support
+#    Click Element    link=Wiki
+#    Wait Until Page Contains    Table of contents
+#Redmine FORUMS
+#    Go to    ${REDMINE_URL}
+#    Wait Until Page Contains    Welcome
+#    Select From List By Index    id=project_quick_jump_box   10
+#   Wait Until Page Contains    FORGE Forums
+#    Click Element    link=Forums
+#    Wait Until Page Contains    Last message 
+#Redmine NEWS
+#    Go to    ${REDMINE_URL}
+#    Wait Until Page Contains    Welcome
+#    Select From List By Index    id=project_quick_jump_box   9
+#    Wait Until Page Contains    FORGE Announce
+#    Click Element    link=News
+#    Wait Until Page Contains    Add news
+
+
+*** Keywords ***
