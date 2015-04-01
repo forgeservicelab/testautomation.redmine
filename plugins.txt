@@ -1,6 +1,6 @@
 *** Settings ***
 Suite Setup    Go to homepage
-Suite Teardown    Close All Browsers
+Suite Teardown    Log Out and Close Browsers
 Resource    ./common/assets/secrets.txt
 Resource    ./common/assets/resource.txt
 Resource    local_resource.txt
@@ -8,34 +8,57 @@ Resource    local_resource.txt
 *** Variables ***
 ${USER}    ${VALID_USER}
 ${PASSWORD}    ${VALID_PASSWORD}
-${TO}    ${TO_XMPP}
 
 *** Test Cases ***
-#Auth LOGIN OK
-#    Set Log Level    NONE
-#    login Auth    ${USER}      ${PASSWORD}    You are currently logged in as ${USER}
-#    Set Log Level    DEBUG
-Sign In without CAS
+Auth LOGIN OK
+    Set Log Level    NONE
+    login Auth    ${USER}      ${PASSWORD}    You are currently logged in as ${USER}
+    Set Log Level    DEBUG
+#Sign In without CAS
+#    Go to    ${REDMINE_URL}
+#    Input Text    id=username    ${USER}
+#    Input Text    id=password    ${PASSWORD}
+#    Click Element    name=login
+#    Wait Until Page Contains    Welcome to FORGE Service Lab
+Open Redmine
     Go to    ${REDMINE_URL}
-    Input Text    id=username    ${USER}
-    Input Text    id=password    ${PASSWORD}
-    Click Element    name=login
-    Wait Until Page Contains    Welcome to FORGE Service Lab
+    Page Should Contain    Logged in as ${USER}
 Administration
     Click Element    link=Administration
     Wait Until Page Contains    Information
 Information
     Click Element    link=Information
-    Wait Until Page Contains    2.2.4.stable
-Plugins
+#    Wait Until Page Contains    2.2.4.stable
+    Wait Until Page Contains    2.6.3.stable
+Plugins AnoWatcher
     Click Element    link=Plugins
+    Wait Until Page Contains    Redmine Anonymous Watchers plug-in
+Plugins Backlogs
     Wait Until Page Contains    Redmine Backlogs
+Plugins Canned Responses
+    Wait Until Page Contains    Redmine Canned Responses plugin
+Plugins Email Notification
+    Wait Until Page Contains    Redmine Email Notification Content Filter plugin
+Plugins Watcher
     Wait Until Page Contains    Redmine Extended Watchers plugin
+Plugins Impasse
     Wait Until Page Contains    Redmine Impasse plugin
+Plugins LDAPSync
     Wait Until Page Contains    Redmine LDAP Sync
-    Wait Until Page Contains    Redcarpet Markdown Wiki formatter
+Plugins MyPage
+    Wait Until Page Contains    MyPage custom queries
+Plugins PDFMAcro
+    Wait Until Page Contains    Redmine PDF Macro
+#Plugins Redcarpet
+#    Wait Until Page Contains    Redcarpet Markdown Wiki formatter
+#Plugins RubyCAS
+#    Wait Until Page Contains    Redmine RubyCAS plugin
+Plugins Stats
+    Wait Until Page Contains    Redmine Issue Statistics
+Plugins WatcherGroups
+    Wait Until Page Contains    Redmine Watcher Groups plugin
+Plugins Wiki extension
     Wait Until Page Contains    Redmine Wiki Extensions plugin
-
 #Redmine Support Wiki
 #    Go to    ${REDMINE_URL}
 #    Wait Until Page Contains    Welcome
