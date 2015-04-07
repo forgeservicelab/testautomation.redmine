@@ -14,12 +14,6 @@ Auth LOGIN OK
     Set Log Level    NONE
     login Auth    ${USER}      ${PASSWORD}    You are currently logged in as ${USER}
     Set Log Level    DEBUG
-#Sign In without CAS
-#    Go to    ${REDMINE_URL}
-#    Input Text    id=username    ${USER}
-#    Input Text    id=password    ${PASSWORD}
-#    Click Element    name=login
-#    Wait Until Page Contains    Welcome to FORGE Service Lab
 Open Redmine
     Go to    ${REDMINE_URL}
     Page Should Contain    Logged in as ${USER}
@@ -29,7 +23,10 @@ Administration
 Information
     Click Element    link=Information
 #    Wait Until Page Contains    2.2.4.stable
-    Wait Until Page Contains    2.6.3.stable
+     Page Should Contain    2.6.3.stable
+     Page Should Contain    production
+     Page Should Contain    PostgreSQL
+     
 Plugins AnoWatcher
     Click Element    link=Plugins
     Wait Until Page Contains    Redmine Anonymous Watchers plug-in
