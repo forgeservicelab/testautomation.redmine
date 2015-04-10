@@ -17,8 +17,8 @@ login Auth
     Click Button  name=button
 
 Go to homepage
-#    Open Browser    ${AUTH_URL}    ${BROWSER}     remote_url=http://ci.forgeservicelab.fi:4444/wd/hub 
-    Open Browser    ${AUTH_URL}    ${BROWSER}    
+    Open Browser    ${AUTH_URL}    ${BROWSER}     remote_url=http://ci.forgeservicelab.fi:4444/wd/hub 
+#    Open Browser    ${AUTH_URL}    ${BROWSER}    
 
 Log Out and Close Browsers
     Wait Until Page Contains    Sign out
