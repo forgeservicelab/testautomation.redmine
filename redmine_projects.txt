@@ -20,29 +20,222 @@ Redmine DIGILE SBD Project
     Wait Until Page Contains    Welcome
     Select From List By Label   id=project_quick_jump_box     DIGILE SBD
     Wait Until Page Contains    DIGILE BUSINESS DEVELOPMENT is Digile internal project
+DIGILE SBD Modules
+    Page Should Contain Link    Overview
+    Page Should Contain Link    Activity
+    Page Should not Contain Link    Statistics
+    Page Should not Contain Link    Roadmap
+    Page Should Contain Link    Backlogs
+    Page Should not Contain Link    Task board
+    Page Should Contain Link    Releases
+    Page Should Contain Link    Issues
+    Page Should Contain Link    New issue
+    Page Should not Contain Link    Gantt
+    Page Should not Contain Link    Calendar
+    Page Should Contain Link    News
+    Page Should not Contain Link    Forums
+    Page Should Contain Link    Documents
+    Page Should Contain Link    Wiki
+    Page Should Contain Link    Files
+    Page Should not Contain Link    Tests
+    Page Should Contain Link    Settings
 Redmine FORGE Project
     Select From List By Label   id=project_quick_jump_box     FORGE
     Wait Until Page Contains    FORGE is the FORGE platform development internal project managed by Digile.
+FORGE Modules
+    Page Should Contain Link    Overview
+    Page Should Contain Link    Activity
+    Page Should not Contain Link    Statistics
+    Page Should not Contain Link    Roadmap
+    Page Should Contain Link    Backlogs
+    Page Should not Contain Link    Task board
+    Page Should Contain Link    Releases
+    Page Should Contain Link    Issues
+    Page Should Contain Link    New issue
+    Page Should not Contain Link    Gantt
+    Page Should not Contain Link    Calendar
+    Page Should not Contain Link    News
+    Page Should not Contain Link    Forums
+    Page Should Contain Link    Documents
+    Page Should Contain Link    Wiki
+    Page Should Contain Link    Files
+    Page Should not Contain Link    Tests
+    Page Should Contain Link    Settings
 Redmine CSC Project
     Select From List By Index   id=project_quick_jump_box       4
     Wait Until Page Contains    CSC is FORGE platform development internal project managed by CSC.
+CSC Modules
+    Page Should Contain Link    Overview
+    Page Should Contain Link    Activity
+    Page Should not Contain Link    Statistics
+    Page Should Contain Link    Roadmap
+    Page Should Contain Link    Backlogs
+    Page Should not Contain Link    Task board
+    Page Should Contain Link    Releases
+    Page Should Contain Link    Issues
+    Page Should Contain Link    New issue
+    Page Should Contain Link    Gantt
+    Page Should Contain Link    Calendar
+    Page Should not Contain Link    News
+    Page Should not Contain Link    Forums
+    Page Should Contain Link    Documents
+    Page Should Contain Link    Wiki
+    Page Should Contain Link    Files
+    Page Should not Contain Link    Tests
+    Page Should Contain Link    Settings
 Redmine Deployment Project
     Select From List By Index   id=project_quick_jump_box       5
     Wait Until Page Contains    DEPLOYMENT is FORGE platform development internal project managed by Weego.
+DEPLOYMENT Modules
+    Page Should Contain Link    Overview
+    Page Should Contain Link    Activity
+    Page Should not Contain Link    Statistics
+    Page Should Contain Link    Roadmap
+    Page Should Contain Link    Backlogs
+    Page Should not Contain Link    Task board
+    Page Should Contain Link    Releases
+    Page Should Contain Link    Issues
+    Page Should Contain Link    New issue
+    Page Should not Contain Link    Gantt
+    Page Should Contain Link    Calendar
+    Page Should Contain Link    News
+    Page Should not Contain Link    Forums
+    Page Should Contain Link    Documents
+    Page Should Contain Link    Wiki
+    Page Should Contain Link    Files
+    Page Should not Contain Link    Tests
+    Page Should Contain Link    Settings
 Redmine DIGILE Project
     Select From List By Index   id=project_quick_jump_box       6
     Wait Until Page Contains    DIGILE is FORGE platform development internal project managed by Digile.
+DIGILE Modules
+    Page Should Contain Link    Overview
+    Page Should Contain Link    Activity
+    Page Should not Contain Link    Statistics
+    Page Should Contain Link    Roadmap
+    Page Should Contain Link    Backlogs
+    Page Should Contain Link    Task board
+    Page Should Contain Link    Releases
+    Page Should Contain Link    Issues
+    Page Should Contain Link    New issue
+    Page Should not Contain Link    Gantt
+    Page Should not Contain Link    Calendar
+    Page Should not Contain Link    News
+    Page Should not Contain Link    Forums
+    Page Should not Contain Link    Documents
+    Page Should Contain Link    Wiki
+    Page Should Contain Link    Files
+    Page Should Contain Link    Tests
+    Page Should Contain Link    Settings
 Redmine DRUID Project
     Select From List By Index   id=project_quick_jump_box       7
     Wait Until Page Contains    DRUID is FORGE platform development internal project which Druid manages
+DRUID Modules
+    Page Should Contain Link    Overview
+    Page Should Contain Link    Activity
+    Page Should not Contain Link    Statistics
+    Page Should Contain Link    Roadmap
+    Page Should Contain Link    Backlogs
+    Page Should not Contain Link    Task board
+    Page Should Contain Link    Releases
+    Page Should Contain Link    Issues
+    Page Should Contain Link    New issue
+    Page Should not Contain Link    Gantt
+    Page Should not Contain Link    Calendar
+    Page Should Contain Link    News
+    Page Should not Contain Link    Forums
+    Page Should Contain Link    Documents
+    Page Should Contain Link    Wiki
+    Page Should Contain Link    Files
+    Page Should Contain Link    Tests
+    Page Should Contain Link    Settings
 Redmine KE Project
     Select From List By Index   id=project_quick_jump_box       8
     Wait Until Page Contains    KE is FORGE platform development internal project managed by Kainuunetu. 
+KE Modules
+    Page Should Contain Link    Overview
+    Page Should Contain Link    Activity
+    Page Should Contain Link    Statistics
+    Page Should Contain Link    Roadmap
+    Page Should Contain Link    Backlogs
+    Page Should not Contain Link    Task board
+    Page Should Contain Link    Releases
+    Page Should Contain Link    Issues
+    Page Should Contain Link    New issue
+    Page Should Contain Link    Gantt
+    Page Should not Contain Link    Calendar
+    Page Should not Contain Link    News
+    Page Should not Contain Link    Forums
+    Page Should not Contain Link    Documents
+    Page Should Contain Link    Wiki
+    Page Should not Contain Link    Files
+    Page Should not Contain Link    Tests
+    Page Should Contain Link    Settings
 Redmine FORGE Service Lab Project
     Select From List By Label   id=project_quick_jump_box     FORGE Service Lab
     Wait Until Page Contains    FORGE has enabled Forums for everybody to be used for discussions and collaboration.
+FORGE Service Lab Modules
+    Page Should Contain Link    Overview
+    Page Should Contain Link    Activity
+    Page Should not Contain Link    Statistics
+    Page Should not Contain Link    Roadmap
+    Page Should not Contain Link    Backlogs
+    Page Should not Contain Link    Task board
+    Page Should not Contain Link    Releases
+    Page Should not Contain Link    Issues
+    Page Should not Contain Link    New issue
+    Page Should not Contain Link    Gantt
+    Page Should not Contain Link    Calendar
+    Page Should Contain Link    News
+    Page Should Contain Link    Forums
+    Page Should not Contain Link    Documents
+    Page Should not Contain Link    Wiki
+    Page Should not Contain Link    Files
+    Page Should not Contain Link    Tests
+    Page Should Contain Link    Settings
 Redmine FORGE Support Project
     Select From List By Label   id=project_quick_jump_box     FORGE Support
     Wait Until Page Contains    FORGE service developers can enjoy additional resources that are made available in FORGE Service Lab.
+Support project modules
+    Page Should Contain Link    Overview
+    Page Should Contain Link    Activity
+    Page Should Contain Link    Statistics
+    Page Should not Contain Link    Roadmap
+    Page Should not Contain Link    Backlogs
+    Page Should not Contain Link    Task board
+    Page Should not Contain Link    Releases
+    Page Should Contain Link    Issues
+    Page Should Contain Link    New issue
+    Page Should not Contain Link    Gantt
+    Page Should not Contain Link    Calendar
+    Page Should not Contain Link    News
+    Page Should not Contain Link    Forums
+    Page Should not Contain Link    Documents
+    Page Should Contain Link    Wiki
+    Page Should not Contain Link    Files
+    Page Should not Contain Link    Tests
+    Page Should Contain Link    Settings
+Redmine Template Project
+    Select From List By Label   id=project_quick_jump_box     Service Development Template Project
+    Wait Until Page Contains    This is the Service Development Template Project. Projects may be created using this template.
+Template Project Modules
+    Page Should Contain Link    Overview
+    Page Should Contain Link    Activity
+    Page Should not Contain Link    Statistics
+    Page Should not Contain Link    Roadmap
+    Page Should Contain Link    Backlogs
+    Page Should not Contain Link    Task board
+    Page Should Contain Link    Releases
+    Page Should Contain Link    Issues
+    Page Should Contain Link    New issue
+    Page Should not Contain Link    Gantt
+    Page Should not Contain Link    Calendar
+    Page Should Contain Link    News
+    Page Should not Contain Link    Forums
+    Page Should Contain Link    Documents
+    Page Should Contain Link    Wiki
+    Page Should Contain Link    Files
+    Page Should not Contain Link    Tests
+    Page Should Contain Link    Settings
 
 *** Keywords ***
