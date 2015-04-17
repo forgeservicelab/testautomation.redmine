@@ -1,0 +1,23 @@
+*** Settings ***
+Suite Setup    Go to homepage
+Suite Teardown    Close All Browsers
+Resource    ./common/assets/secrets.txt
+Resource    ./common/assets/resource.txt
+Resource    local_resource.txt
+
+*** Variables ***
+${USER}    ${VALID_SERVICE_DEVELOPER}
+${PASSWORD}    ${VALID_SERVICE_DEVELOPER_PASSWORD}
+
+*** Test Cases ***
+Auth LOGIN OK
+    Set Log Level    NONE
+    login Auth    ${USER}      ${PASSWORD}    You are currently logged in as ${USER}
+    Set Log Level    DEBUG
+Redmine Logout should be redirected to auth2
+    Go to    ${REDMINE_URL}
+    Wait Until Page Contains    Welcome
+    Click Element    link=Sign out
+    Page Should Contain    Bye.
+    Page Should Contain    You have successfully logged out.
+*** Keywords ***
