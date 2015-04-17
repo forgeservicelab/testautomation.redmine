@@ -1,0 +1,39 @@
+*** Settings ***
+Suite Setup    Go to homepage
+Suite Teardown    Log Out and Close Browsers
+Resource    ./common/assets/secrets.txt
+Resource    ./common/assets/resource.txt
+Resource    local_resource.txt
+
+*** Variables ***
+${USER}    ${VALID_PARTNERCRA}
+${PASSWORD}    ${VALID_PARTNERCRA_PASSWORD}
+${TO}    ${TO_XMPP}
+
+*** Test Cases ***
+Auth LOGIN OK
+    Set Log Level    NONE
+    login Auth    ${USER}      ${PASSWORD}    You are currently logged in as ${USER}
+    Set Log Level    DEBUG
+Redmine Support Wiki Should Fail
+    Go to    ${REDMINE_URL}/projects/forge-support/wiki
+    Wait Until Page Contains    WE'RE SORRY!
+    Page Should Contain    Forbidden 
+Redmine FORUMS
+    Go to    ${REDMINE_URL}
+    Wait Until Page Contains    Welcome
+    Select From List By Label   id=project_quick_jump_box     FORGE Service Lab
+#    Select From List By Index    id=project_quick_jump_box  3
+    Wait Until Page Contains    Forums
+    Click Element    link=Forums
+    Wait Until Page Contains    Last message 
+Redmine NEWS
+    Go to    ${REDMINE_URL}
+    Wait Until Page Contains    Welcome
+    Select From List By Label   id=project_quick_jump_box     FORGE Service Lab
+#    Select From List By Index    id=project_quick_jump_box   3 
+    Wait Until Page Contains    News 
+    Click Element    link=News
+    Wait Until Page Contains    Add news
+
+*** Keywords ***
