@@ -27,15 +27,15 @@ Information
      Page Should Contain    production
      Page Should Contain    PostgreSQL
      
-Plugins AnoWatcher
-    Click Element    link=Plugins
-    Wait Until Page Contains    Redmine Anonymous Watchers plug-in
+#Plugins AnoWatcher
+#    Click Element    link=Plugins
+#    Wait Until Page Contains    Redmine Anonymous Watchers plug-in
 Plugins Backlogs
     Wait Until Page Contains    Redmine Backlogs
 Plugins Canned Responses
     Wait Until Page Contains    Redmine Canned Responses plugin
-Plugins Email Notification
-    Wait Until Page Contains    Redmine Email Notification Content Filter plugin
+#Plugins Email Notification
+#    Wait Until Page Contains    Redmine Email Notification Content Filter plugin
 Plugins Watcher
     Wait Until Page Contains    Redmine Extended Watchers plugin
 Plugins Impasse
