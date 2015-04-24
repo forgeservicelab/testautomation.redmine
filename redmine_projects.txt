@@ -18,7 +18,8 @@ Auth LOGIN OK
 Redmine DIGILE SBD Project
     Go to    ${REDMINE_URL}
     Wait Until Page Contains    Welcome
-    Select From List By Label   id=project_quick_jump_box     DIGILE SBD
+    Go to     ${REDMINE_URL}/projects/digilesales
+#    Select From List By Label   id=project_quick_jump_box     DIGILE SBD
     Wait Until Page Contains    DIGILE BUSINESS DEVELOPMENT is Digile internal project
 DIGILE SBD Modules
     Page Should Contain Link    Overview
@@ -40,7 +41,8 @@ DIGILE SBD Modules
     Page Should not Contain Link    Tests
     Page Should Contain Link    Settings
 Redmine FORGE Project
-    Select From List By Label   id=project_quick_jump_box     FORGE
+    Go to     ${REDMINE_URL}/projects/forge
+#    Select From List By Label   id=project_quick_jump_box     FORGE
     Wait Until Page Contains    FORGE is the FORGE platform development internal project managed by Digile.
 FORGE Modules
     Page Should Contain Link    Overview
@@ -62,7 +64,8 @@ FORGE Modules
     Page Should not Contain Link    Tests
     Page Should Contain Link    Settings
 Redmine CSC Project
-    Select From List By Index   id=project_quick_jump_box       4
+    Go to     ${REDMINE_URL}/projects/csc
+#    Select From List By Index   id=project_Pquick_jump_box       4
     Wait Until Page Contains    CSC is FORGE platform development internal project managed by CSC.
 CSC Modules
     Page Should Contain Link    Overview
@@ -84,7 +87,8 @@ CSC Modules
     Page Should not Contain Link    Tests
     Page Should Contain Link    Settings
 Redmine Deployment Project
-    Select From List By Index   id=project_quick_jump_box       5
+    Go to     ${REDMINE_URL}/projects/deployment
+#    Select From List By Index   id=project_quick_jump_box       5
     Wait Until Page Contains    DEPLOYMENT is FORGE platform development internal project managed by Weego.
 DEPLOYMENT Modules
     Page Should Contain Link    Overview
@@ -106,7 +110,8 @@ DEPLOYMENT Modules
     Page Should not Contain Link    Tests
     Page Should Contain Link    Settings
 Redmine DIGILE Project
-    Select From List By Index   id=project_quick_jump_box       6
+    Go to     ${REDMINE_URL}/projects/digile
+#    Select From List By Index   id=project_quick_jump_box       6
     Wait Until Page Contains    DIGILE is FORGE platform development internal project managed by Digile.
 DIGILE Modules
     Page Should Contain Link    Overview
@@ -128,7 +133,8 @@ DIGILE Modules
     Page Should Contain Link    Tests
     Page Should Contain Link    Settings
 Redmine DRUID Project
-    Select From List By Index   id=project_quick_jump_box       7
+    Go to     ${REDMINE_URL}/projects/druid
+#    Select From List By Index   id=project_quick_jump_box       7
     Wait Until Page Contains    DRUID is FORGE platform development internal project which Druid manages
 DRUID Modules
     Page Should Contain Link    Overview
@@ -150,7 +156,8 @@ DRUID Modules
     Page Should Contain Link    Tests
     Page Should Contain Link    Settings
 Redmine KE Project
-    Select From List By Index   id=project_quick_jump_box       8
+    Go to     ${REDMINE_URL}/projects/ke
+#    Select From List By Index   id=project_quick_jump_box       8
     Wait Until Page Contains    KE is FORGE platform development internal project managed by Kainuunetu. 
 KE Modules
     Page Should Contain Link    Overview
@@ -172,7 +179,8 @@ KE Modules
     Page Should not Contain Link    Tests
     Page Should Contain Link    Settings
 Redmine FORGE Service Lab Project
-    Select From List By Label   id=project_quick_jump_box     FORGE Service Lab
+    Go to     ${REDMINE_URL}/projects/forums
+#    Select From List By Label   id=project_quick_jump_box     FORGE Service Lab
     Wait Until Page Contains    FORGE has enabled Forums for everybody to be used for discussions and collaboration.
 FORGE Service Lab Modules
     Page Should Contain Link    Overview
@@ -194,7 +202,8 @@ FORGE Service Lab Modules
     Page Should not Contain Link    Tests
     Page Should Contain Link    Settings
 Redmine FORGE Support Project
-    Select From List By Label   id=project_quick_jump_box     FORGE Support
+    Go to     ${REDMINE_URL}/projects/forge-support
+#    Select From List By Label   id=project_quick_jump_box     FORGE Support
     Wait Until Page Contains    FORGE service developers can enjoy additional resources that are made available in FORGE Service Lab.
 Support project modules
     Page Should Contain Link    Overview
@@ -216,7 +225,8 @@ Support project modules
     Page Should not Contain Link    Tests
     Page Should Contain Link    Settings
 Redmine Template Project
-    Select From List By Label   id=project_quick_jump_box     Service Development Template Project
+    Go to     ${REDMINE_URL}/projects/template
+#    Select From List By Label   id=project_quick_jump_box     Service Development Template Project
     Wait Until Page Contains    This is the Service Development Template Project. Projects may be created using this template.
 Template Project Modules
     Page Should Contain Link    Overview
