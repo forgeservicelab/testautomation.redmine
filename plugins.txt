@@ -31,6 +31,7 @@ Information
 #    Click Element    link=Plugins
 #    Wait Until Page Contains    Redmine Anonymous Watchers plug-in
 Plugins Backlogs
+    Click Element    link=Plugins
     Wait Until Page Contains    Redmine Backlogs
 Plugins Canned Responses
     Wait Until Page Contains    Redmine Canned Responses plugin
