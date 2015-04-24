@@ -18,7 +18,8 @@ Auth LOGIN OK
 Redmine Support Wiki
     Go to    ${REDMINE_URL}
     Wait Until Page Contains    Welcome
-    Select From List By Label   id=project_quick_jump_box     FORGE Support
+    Go to     ${REDMINE_URL}/projects/forge-support
+#    Select From List By Label   id=project_quick_jump_box     FORGE Support
     Wait Until Page Contains    FORGE Support
     Click Element    link=Wiki
     Wait Until Page Contains    Table of contents
@@ -36,7 +37,7 @@ Redmine FORUMS
 Redmine NEWS
     Go to    ${REDMINE_URL}
     Wait Until Page Contains    Welcome
-    Go to     ${REDMINE_URL}/projects/forge-support
+    Go to     ${REDMINE_URL}/projects/forums
 #    Select From List By Label   id=project_quick_jump_box     FORGE Service Lab
 #    Select From List By Index    id=project_quick_jump_box   2 
     Wait Until Page Contains    News
