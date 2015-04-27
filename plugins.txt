@@ -23,24 +23,28 @@ Administration
 Information
     Click Element    link=Information
 #    Wait Until Page Contains    2.2.4.stable
-     Page Should Contain    2.6.3.stable
-     Page Should Contain    production
-     Page Should Contain    PostgreSQL
+    Page Should Contain    2.6.3.stable
+    Page Should Contain    production
+    Page Should Contain    PostgreSQL
+    Click Element    link=Plugins
      
 #Plugins AnoWatcher
 #    Click Element    link=Plugins
 #    Wait Until Page Contains    Redmine Anonymous Watchers plug-in
 Plugins Backlogs
-    Click Element    link=Plugins
     Wait Until Page Contains    Redmine Backlogs
 Plugins Canned Responses
     Wait Until Page Contains    Redmine Canned Responses plugin
+Plugin Redmine CAS
+    Wait Until Page Contains    Plugin to CASify your Redmine installation.
 #Plugins Email Notification
 #    Wait Until Page Contains    Redmine Email Notification Content Filter plugin
 Plugins Watcher
     Wait Until Page Contains    Redmine Extended Watchers plugin
 Plugins Impasse
     Wait Until Page Contains    Redmine Impasse plugin
+Plugin Search Box
+    Wait Until Page Contains    Project Search Box Plugin
 Plugins LDAPSync
     Wait Until Page Contains    Redmine LDAP Sync
 Plugins MyPage
@@ -57,27 +61,6 @@ Plugins WatcherGroups
     Wait Until Page Contains    Redmine Watcher Groups plugin
 Plugins Wiki extension
     Wait Until Page Contains    Redmine Wiki Extensions plugin
-#Redmine Support Wiki
-#    Go to    ${REDMINE_URL}
-#    Wait Until Page Contains    Welcome
-#    Select From List By Index    id=project_quick_jump_box    11
-#    Wait Until Page Contains    FORGE Support
-#    Click Element    link=Wiki
-#    Wait Until Page Contains    Table of contents
-#Redmine FORUMS
-#    Go to    ${REDMINE_URL}
-#    Wait Until Page Contains    Welcome
-#    Select From List By Index    id=project_quick_jump_box   10
-#   Wait Until Page Contains    FORGE Forums
-#    Click Element    link=Forums
-#    Wait Until Page Contains    Last message 
-#Redmine NEWS
-#    Go to    ${REDMINE_URL}
-#    Wait Until Page Contains    Welcome
-#    Select From List By Index    id=project_quick_jump_box   9
-#    Wait Until Page Contains    FORGE Announce
-#    Click Element    link=News
-#    Wait Until Page Contains    Add news
 
 
 *** Keywords ***
