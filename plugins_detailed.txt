@@ -1,0 +1,36 @@
+*** Settings ***
+Documentation    Check plugins funtionality
+Suite Setup    Go to homepage
+Suite Teardown    Log Out and Close Browsers
+Resource    ./common/assets/secrets.txt
+Resource    ./common/assets/resource.txt
+Resource    local_resource.txt
+
+*** Variables ***
+${USER}    ${VALID_USER}
+${PASSWORD}    ${VALID_PASSWORD}
+
+*** Test Cases ***
+Auth LOGIN OK
+    Set Log Level    NONE
+    login Auth    ${USER}      ${PASSWORD}    You are currently logged in as ${USER}
+    Set Log Level    DEBUG
+Open Redmine
+    Go to    ${REDMINE_URL}
+    Page Should Contain    Logged in as ${USER}
+Plugins Backlogs Detailed
+    Go to    ${REDMINE_URL}/projects/digile
+    Wait Until Page Contains    Backlogs
+    Click Link    Backlogs
+    Page Should Contain    sprint
+    Page Should Contain    release
+#Task board
+#    Click Link    Task board
+#    Alert Should Be Present    There are no task states. Please check the workflow of your tasks tracker in the administration section.
+#    Page Should Contain    Sprint Impediments
+Plugins Impasse Detailed
+    Click Link    Tests
+    Page Should Contain    Test plans 
+
+
+*** Keywords ***
