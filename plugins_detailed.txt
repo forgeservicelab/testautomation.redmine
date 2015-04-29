@@ -31,6 +31,12 @@ Plugins Backlogs Detailed
 Plugins Impasse Detailed
     Click Link    Tests
     Page Should Contain    Test plans 
+Plugins Statics Detailed
+    Go to    ${REDMINE_URL}/projects/ke
+    Click Link    Statistics
+    Page Should Not Contain    WE'RE SORRY!
+    Page Should Not Contain    Internal Server Error
+    Page Should Contain    Issue amounts over time
 
 
 *** Keywords ***
