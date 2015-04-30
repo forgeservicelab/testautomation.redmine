@@ -14,7 +14,7 @@ Auth LOGIN OK
     Set Log Level    NONE
     login Auth    ${USER}      ${PASSWORD}    You are currently logged in as ${USER}
     Set Log Level    DEBUG
-Redmine Logout should be redirected to auth2
+Redmine Logout should be redirected to auth
     Go to    ${REDMINE_URL}
     Wait Until Page Contains    Welcome
     Click Element    link=Sign out
