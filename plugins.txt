@@ -17,6 +17,8 @@ Auth LOGIN OK
 Open Redmine
     Go to    ${REDMINE_URL}
     Page Should Contain    Logged in as ${USER}
+Help Link Should not be present
+    Page Should Not Contain Link    Help
 Administration
     Click Element    link=Administration
     Wait Until Page Contains    Information
@@ -61,6 +63,7 @@ Plugins WatcherGroups
     Wait Until Page Contains    Redmine Watcher Groups plugin
 Plugins Wiki extension
     Wait Until Page Contains    Redmine Wiki Extensions plugin
+    
 
 
 *** Keywords ***
