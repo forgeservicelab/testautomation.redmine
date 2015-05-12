@@ -119,7 +119,7 @@ DIGILE Modules
     Page Should not Contain Link    Statistics
     Page Should Contain Link    Roadmap
     Page Should Contain Link    Backlogs
-    Page Should Contain Link    Task board
+#    Page Should Contain Link    Task board
     Page Should Contain Link    Releases
     Page Should Contain Link    Issues
     Page Should Contain Link    New issue
