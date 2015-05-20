@@ -24,11 +24,33 @@ Plugins Backlogs Detailed
     Click Link    Backlogs
     Page Should Contain    sprint
     Page Should Contain    release
+Plugins Canned Messages Detailed
+    Go to    ${REDMINE_URL}/projects/forge-support
+    Sleep    1 s
+    Page Should Contain    FORGE service developers can
+    Click Link    New issue
+    Sleep    1 s
+    Select From List    id=issue_tracker_id    Support
+#    Sleep    1 s
+#    Input Text    id=issue_description    DEBUG
+    Sleep    2 s
+    Select From List By Index    id=canned_response     1
+    Sleep    2 s
+    ${temp}    Get Value    id=issue_description
+#    Should Be Equal    ${temp}    DEBUG
+    ${LEN}    Get Length    ${temp}
+    ${VALI}    Set Variable If     ${LEN} > 10    OK    NOK
+    Should Be Equal    OK    ${VALI}    Canned Message too Short
+
 #Task board
 #    Click Link    Task board
 #    Alert Should Be Present    There are no task states. Please check the workflow of your tasks tracker in the administration section.
 #    Page Should Contain    Sprint Impediments
+
+
 Plugins Impasse Detailed
+    Go to    ${REDMINE_URL}/projects/digile
+    Wait Until Page Contains    Backlogs
     Click Link    Tests
     Page Should Contain    Test plans 
 Plugins Statics Detailed
