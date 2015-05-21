@@ -27,7 +27,7 @@ DIGILE SBD Modules
     Page Should not Contain Link    Statistics
     Page Should not Contain Link    Roadmap
     Page Should Contain Link    Backlogs
-    Page Should not Contain Link    Task board
+#    Page Should not Contain Link    Task board
     Page Should Contain Link    Releases
     Page Should Contain Link    Issues
     Page Should Contain Link    New issue
@@ -50,7 +50,7 @@ FORGE Modules
     Page Should not Contain Link    Statistics
     Page Should not Contain Link    Roadmap
     Page Should Contain Link    Backlogs
-    Page Should not Contain Link    Task board
+#    Page Should not Contain Link    Task board
     Page Should Contain Link    Releases
     Page Should Contain Link    Issues
     Page Should Contain Link    New issue
@@ -73,7 +73,7 @@ CSC Modules
     Page Should not Contain Link    Statistics
     Page Should Contain Link    Roadmap
     Page Should Contain Link    Backlogs
-    Page Should not Contain Link    Task board
+#    Page Should not Contain Link    Task board
     Page Should Contain Link    Releases
     Page Should Contain Link    Issues
     Page Should Contain Link    New issue
@@ -86,29 +86,29 @@ CSC Modules
     Page Should Contain Link    Files
     Page Should not Contain Link    Tests
     Page Should Contain Link    Settings
-Redmine Deployment Project
-    Go to     ${REDMINE_URL}/projects/deployment
-#    Select From List By Index   id=project_quick_jump_box       5
-    Wait Until Page Contains    DEPLOYMENT is FORGE platform development internal project managed by Weego.
-DEPLOYMENT Modules
-    Page Should Contain Link    Overview
-    Page Should Contain Link    Activity
-    Page Should not Contain Link    Statistics
-    Page Should Contain Link    Roadmap
-    Page Should Contain Link    Backlogs
-    Page Should not Contain Link    Task board
-    Page Should Contain Link    Releases
-    Page Should Contain Link    Issues
-    Page Should Contain Link    New issue
-    Page Should not Contain Link    Gantt
-    Page Should Contain Link    Calendar
-    Page Should Contain Link    News
-    Page Should not Contain Link    Forums
-    Page Should Contain Link    Documents
-    Page Should Contain Link    Wiki
-    Page Should Contain Link    Files
-    Page Should not Contain Link    Tests
-    Page Should Contain Link    Settings
+#Redmine Deployment Project
+#    Go to     ${REDMINE_URL}/projects/deployment
+##    Select From List By Index   id=project_quick_jump_box       5
+#    Wait Until Page Contains    DEPLOYMENT is FORGE platform development internal project managed by Weego.
+#DEPLOYMENT Modules
+#    Page Should Contain Link    Overview
+#    Page Should Contain Link    Activity
+#    Page Should not Contain Link    Statistics
+#    Page Should Contain Link    Roadmap
+#    Page Should Contain Link    Backlogs
+#    Page Should not Contain Link    Task board
+#    Page Should Contain Link    Releases
+#    Page Should Contain Link    Issues
+#    Page Should Contain Link    New issue
+#    Page Should not Contain Link    Gantt
+#    Page Should Contain Link    Calendar
+#    Page Should Contain Link    News
+#    Page Should not Contain Link    Forums
+#    Page Should Contain Link    Documents
+#    Page Should Contain Link    Wiki
+#    Page Should Contain Link    Files
+#    Page Should not Contain Link    Tests
+#    Page Should Contain Link    Settings
 Redmine DIGILE Project
     Go to     ${REDMINE_URL}/projects/digile
 #    Select From List By Index   id=project_quick_jump_box       6
@@ -125,7 +125,7 @@ DIGILE Modules
     Page Should Contain Link    New issue
     Page Should not Contain Link    Gantt
     Page Should not Contain Link    Calendar
-    Page Should not Contain Link    News
+#    Page Should not Contain Link    News
     Page Should not Contain Link    Forums
     Page Should not Contain Link    Documents
     Page Should Contain Link    Wiki
@@ -142,7 +142,7 @@ DRUID Modules
     Page Should not Contain Link    Statistics
     Page Should Contain Link    Roadmap
     Page Should Contain Link    Backlogs
-    Page Should not Contain Link    Task board
+#    Page Should not Contain Link    Task board
     Page Should Contain Link    Releases
     Page Should Contain Link    Issues
     Page Should Contain Link    New issue
@@ -165,7 +165,7 @@ KE Modules
     Page Should Contain Link    Statistics
     Page Should Contain Link    Roadmap
     Page Should Contain Link    Backlogs
-    Page Should not Contain Link    Task board
+#    Page Should not Contain Link    Task board
     Page Should Contain Link    Releases
     Page Should Contain Link    Issues
     Page Should Contain Link    New issue
@@ -188,7 +188,7 @@ FORGE Service Lab Modules
     Page Should not Contain Link    Statistics
     Page Should not Contain Link    Roadmap
     Page Should not Contain Link    Backlogs
-    Page Should not Contain Link    Task board
+#    Page Should not Contain Link    Task board
     Page Should not Contain Link    Releases
     Page Should not Contain Link    Issues
     Page Should not Contain Link    New issue
@@ -211,7 +211,7 @@ Support project modules
     Page Should Contain Link    Statistics
     Page Should not Contain Link    Roadmap
     Page Should not Contain Link    Backlogs
-    Page Should not Contain Link    Task board
+#    Page Should not Contain Link    Task board
     Page Should not Contain Link    Releases
     Page Should Contain Link    Issues
     Page Should Contain Link    New issue
@@ -234,7 +234,7 @@ Template Project Modules
     Page Should not Contain Link    Statistics
     Page Should not Contain Link    Roadmap
     Page Should Contain Link    Backlogs
-    Page Should not Contain Link    Task board
+#    Page Should not Contain Link    Task board
     Page Should Contain Link    Releases
     Page Should Contain Link    Issues
     Page Should Contain Link    New issue
